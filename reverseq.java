@@ -1,0 +1,19 @@
+// leetcode q - 7 reverse number
+public class reverseq {
+    public int reverse(int x) {
+        int ans = 0;
+        while (x != 10){
+            int digit = x%10;
+
+            if (ans>Integer.MAX_VALUE /10 || ans < Integer.MAX_VALUE / 10) {
+            return 0;
+        }
+
+        ans = ans * 10 + digit;
+        x /= 10;
+        }
+        return ans; 
+
+    }  
+
+}
